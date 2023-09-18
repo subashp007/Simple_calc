@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple_Calculator</title>
+    <link href="index.css" rel="stylesheet" />
+    
+</head>
+<body>
+    <div class="container">
+        <form>
+            <div>
+                <input type="text" class="display" name="dis" placeholder="00" />
+            </div>
+            <div class="main">
+            <div class="box">
+                <input type="button" value="AC" class="button operator" onclick="dis.value =''" />
+                <input type="button" value="DE"class="button operator" onclick="dis.value =dis.value.toString().slice(0,-1)" />
+                <input type="button" value="." class="button operator" onclick="dis.value +='.'" />
+                <input type="button" value="/" class="button operator" onclick="dis.value +='/'" />
+            </div>
+            <div class="box">
+                <input type="button" value="7" class="button " onclick="dis.value +='7'" />
+                <input type="button" value="8" class="button" onclick="dis.value +='8'" />
+                <input type="button" value="9" class="button" onclick="dis.value +='9'" />
+                <input type="button" value="*" class="button operator"  onclick="dis.value +='*'" />
+            </div>
+            <div class="box" >
+                <input type="button" value="4" class="button" onclick="dis.value +='4'" />
+                <input type="button" value="5" class="button" onclick="dis.value +='5'" />
+                <input type="button" value="6" class="button" onclick="dis.value +='6'" />
+                <input type="button" value="-" class="button operator" onclick="dis.value +='-'" />
+            </div>
+            <div class="box" >
+                <input type="button" value="1" class="button" onclick="dis.value +='1'" />
+                <input type="button" value="2"  class="button" onclick="dis.value +='2'" />
+                <input type="button" value="3" class="button" onclick="dis.value +='3'" />
+                <input type="button" value="+"  class="button operator" onclick="dis.value +='+'" />
+            </div>
+            <div class="box" >
+                <input type="button" value="0" class="button" onclick="dis.value +='0'" />
+                <input type="button" value="00" class="button" onclick="dis.value +='00'" />
+                <input type="button" value="=" class="button b operator" onclick="dis.value =eval(dis.value)" />
+            </div>
+        </div>
+
+        </form>
+    </div>
+</body>
+</html>
